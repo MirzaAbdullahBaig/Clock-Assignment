@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #b5fae6;
+    background-color: #FFFDAF;
 }
 
 .name {
@@ -21,6 +21,8 @@ h1 {
     margin-top: 40px;
     display: inline-block;
     font-size: 50px;
+    font-family: "Playball", cursive;
+    font-weight: 400;
     background-image: url(https://img.freepik.com/free-photo/vivid-colored-transparent-autumn-leaf_23-2148239739.jpg?w=360&t=st=1714550696~exp=1714551296~hmac=b8bac6cb51c2510c0ea2712d5e8e0deed92de4ef6e1ab400e376298954a883ce);
     background-size: cover;
     background-position: center;
@@ -44,4 +46,44 @@ h1 {
     left: 0;
     height: 2px;
     width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.time, .date {
+    display:  block;
+    text-align: center;
+    margin: 20px;
+}
+
+.date span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.time-span {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.ampm {
+    margin-left: 5px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+span {
+    background-image: url(https://img.freepik.com/free-photo/vivid-colored-transparent-autumn-leaf_23-2148239739.jpg?w=360&t=st=1714550696~exp=1714551296~hmac=b8bac6cb51c2510c0ea2712d5e8e0deed92de4ef6e1ab400e376298954a883ce);
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }

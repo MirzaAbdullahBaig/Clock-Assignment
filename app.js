@@ -35,7 +35,9 @@ function updateDateTime() {
   } else if (hour < 12) {
     ampm = "AM";
   } else {
-    hour = hour - 12;
+    if (hour > 12) {
+      hour -= 12;
+    }
     ampm = "PM";
   }
 

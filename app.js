@@ -6,8 +6,6 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 let date = new Date();
-let shift = "";
-let ampm = ""
 
 let day = days[date.getDay()].slice(0, 3);
 let new_date = String(date.getDate()).padStart(2, 0);
@@ -18,6 +16,7 @@ let hour = String(date.getHours()).padStart(2, 0);
 let mint = String(date.getMinutes()).padStart(2, 0);
 let sec = String(date.getSeconds()).padStart(2, 0);
 
+let shift;
 if (hour >= 5 && hour < 12) {
   shift = "Morning";
 } else if (hour >= 12 && hour < 17) {
@@ -28,6 +27,7 @@ if (hour >= 5 && hour < 12) {
   shift = "Night";
 }
 
+let ampm;
 if (hour === 0) {
   hour = 12;
   ampm = "AM";
@@ -38,13 +38,11 @@ if (hour === 0) {
   ampm = "PM";
 }
 
+let final_date = `${day} ${new_date}-${month}-${year}`
+let final_time = `${hour}:${mint}:${sec}`;
+
 document.getElementById(`user-name`).innerHTML = name;
 document.getElementById(`shif`).innerHTML = shift;
-
-let final_date = `${day} ${new_date}-${month}-${year}`
-let final_time = `${hour}:${mint}:${sec} ${ampm}`;
-
-console.log(date);
-console.log(shift);
-console.log(final_date);
-console.log(final_time);
+document.getElementById(`dt`).innerHTML = final_date;
+document.getElementById(`tm`).innerHTML = final_time;
+document.getElementById(`am`).innerHTML = ampm;

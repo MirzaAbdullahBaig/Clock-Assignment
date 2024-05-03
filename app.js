@@ -40,6 +40,7 @@ function updateDateTime() {
     }
     ampm = "PM";
   }
+  hour = String(hour).padStart(2, 0);
 
   let final_date = `${day} ${new_date}-${month}-${year}`
   let final_time = `${hour}:${mint}:${sec}`;
